@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        
+        }
+        ul li{
+            list-style-type: none;
+        }
+        .navbar{
+            background-color: #2c3e50;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+
+        }
+        .navlinks{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .navlink{
+            color: white;
+            padding: 10px 16px;
+            position: relative;
+            display: block;
+            transition: 0.3s background-color 0.3s;
+        }
+        .navlink::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+        height: 3px;
+        background-color: #3498db;
+transition:width 0.3s;
+        }
+        .navlink:hover{
+            color: #3498db;
+    background-color: rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 768px) {
+    .navlink {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2c3e50;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#">My Start</a>
+    <div class="container">
+        <ul class="navlinks">
+            <li class="navlink">Home</li>
+            <li class="navlink">About</li>
+            <li class="navlink">Contact us</li>
+            <li class="navlink">More</li>
+        </ul>
+
+    </div>
+    </nav>
+    
+</body>
+</html>
