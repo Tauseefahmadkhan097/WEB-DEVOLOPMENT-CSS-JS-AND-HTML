@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" >
+</head>
+<style>
+    body{
+        background-image: url('netflixbc.webp');
+        /* background-color: rgba(0, 0, 0, 0.8); */
+        background-color: rgba(0, 0, 0, 0.8) 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+    }
+    .logo{
+    /* text-align: center; */
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .image{
+        opacity: 0.8;
+        background-color: none;
+        width: 180px;
+        height: 150px;
+        position: relative;
+        right: 100px;
+    }
+    .search{
+        display: block;
+        text-align: center;
+        /* color: white; */
+        /* margin: 6px; */
+        /* margin-left: 6px; */
+    }
+    #butt{
+        background-color: red;
+        color: white;
+        margin-left: 3px;
+        padding: 14px;
+        width: 200px;
+        border: 1px solid red;
+        border-radius: 4px;
+        font-size: 1.2em;
+    }
+    #email{
+        background-color: rgba(45, 42, 42, 0.8);
+        color: white;
+        width: 330px;
+        /* height: 40px; */
+        padding: 18px;
+        border: 1px solid grey;
+        border-radius: 4px;
+    }
+    #butt1{
+        width: 6em;
+        padding: 8px;
+        background-color: red;
+        border: 1px solid red;
+        border-radius: 4px;
+        color: white;
+        position: absolute;
+        right: 150px;
+    }
+    h1{
+    font-size: 3.1em;
+    margin: .67em 0;
+}
+.main{
+    color: white;
+    font-size: 1.3em;
+}
+#email:hover{
+    border: 2px solid white;
+}
+#butt:hover{
+    background-color: rgb(195, 19, 19);
+    border: 2px solid rgb(195, 19, 19);;
+} 
+   
+</style>
+<body>
+    <div class="logo">
+        <img src="https://gray-wndu-prod.web.arc-cdn.net/resizer/v2/JYDNHDPW3ZDVRHIERWNZUG3OFA.jpg?auth=9aeeee5b55cb60f27cee0b8f27e41ec14a65d610edc9759d752ea12d3f8c4345&width=1200&height=675&smart=true&quality=85" alt="" class="image">
+        <p>
+        <button id="butt1">Sign in</button>
+    </p>
+    
+
+    </div>
+    <br><br><br><br>
+    <div class="search">
+        <h1 style="color: white;">Unlimited movies, TV shows, and more</h1>
+        <p class="main">Watch anywhere. Cancel anytime.</p>
+
+        <p class="main"> Ready to watch? Enter your email to create or restart your membership.</p>
+        <input type="email" name="email" id="email" placeholder="Email address">
+        <button id="butt"><b>Get started</b>&nbsp;&nbsp;<i class="fa-solid fa-greater-than"></i></button>
+    </div>
+</body>
+</html>
