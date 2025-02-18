@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .container{
+            display: flex;
+            min-height: 200px;
+            min-width: 200px;
+            justify-content: center;
+            align-items: center;
+            border: 2px dotted black;
+
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            border: 2px solid aqua;
+            border-radius: 8px;
+            background-color: aqua;
+            margin: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            font-family: 'Times New Roman', Times, serifs;
+        }
+        .item:nth-child(1){
+            order: 1;
+        }
+        .item{
+            flex-grow: 0;
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>
