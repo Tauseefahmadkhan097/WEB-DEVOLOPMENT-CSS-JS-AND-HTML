@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Search Example</title>
+</head>
+<body>
+    <h1 id="header">Hello World</h1>
+    <button class="btn">Click Me</button>
+    <button class="btn">Click Me Too</button>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <script>
+        // By ID
+        var header = document.getElementById('header');
+        console.log(header);
+
+        // By Class Name
+        var buttons = document.getElementsByClassName('btn');
+        console.log(buttons);
+
+        // By Tag Name
+        var paragraphs = document.getElementsByTagName('p');
+        console.log(paragraphs);
+
+        // By Query Selector
+        var firstButton = document.querySelector('.btn');
+        console.log(firstButton);
+
+        // By Query Selector All
+        var allButtons = document.querySelectorAll('.btn');
+        console.log(allButtons);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Button Example</title>
+    <script src="https://tailwindcss.com"></script>
+    <style>
+    
+        .my-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .my-button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>s
+    <h1>Hii</h1>
+    <button class="my-button" onclick="buttonClicked()">Click Me!</button>
+    <script>
+        function buttonClicked() {
+            alert('This is alive button!');
+        }
+    </script>
+</body>
+</html>

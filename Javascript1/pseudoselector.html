@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After</title>
+    <style>
+        span[data-day]{
+            position: relative;
+            padding: 6px;
+            text-decoration: underline;
+            color: blue;
+            cursor: help;
+        }
+        span[data-day]:hover::after,span[data-day]:focus::after{
+            content: attr(data-day);
+            position: absolute;
+            left: 0;top: 24px;
+            border: 2px solid black;
+            border-radius: 6px;
+            background-color: yellow;
+            overflow: hidden;
+            font-size: 20px;
+            padding: 6px;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        here we have some
+    </p>
+    <span data-day="Hi this programming gian">span1</span>
+    <span data-day="i am a smart web devoloper">span 2</span>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching The nodes</title>
+</head>
+<body>
+    <h1 class="header">Hi this is my portfolio</h1>
+    <h2 class="header">Hi this another</h2>
+    <button id="btn">Click Me</button>
+    <button id="btn">Click There</button>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <script>
+        let h1 = document.getElementsByClassName('header')
+        console.log(h1)
+        let button = document.getElementById('btn')
+        console.log(button)
+     var Paragraphs = document.getElementsByTagName('p')
+        console.log(Paragraphs)
+         // By Query Selector
+         var firstButton = document.querySelector('#btn');
+        console.log(firstButton);
+
+        // By Query Selector All
+        var allButtons = document.querySelectorAll('#btn');
+        console.log(allButtons);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- ICONS IN CSS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" >
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .box{
+            border: 10px solid rgb(119, 119, 209);
+            border-top: 10px solid red ;
+            width: 300px;
+            height: 150px;
+            box-sizing: border-box;
+position: absolute;
+left: 500px;
+top: 300px;
+background-color: antiquewhite;
+animation: id 2s ease-in 1s infinite normal;
+        }
+        @keyframes id {
+            from{
+                border:10px solid rgb(119, 119, 209); 
+                background-color: antiquewhite;
+            }
+            to{
+                border-top: 10px solid red;
+                background-color: rgb(190, 115, 15);
+            }
+            
+        }
+
+    </style>
+    <title>Icons in css</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: aqua;">Icons in Css</h1>
+    <div class="box">
+    <a href="#" class="list.item"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; Home </a>
+    <br><hr>
+    <a href="#" class="list.item"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Download </a>
+    <hr>
+    <a href="#" class="list.item"><i class="fa-solid fa-print"></i>&nbsp;&nbsp;Print Here
+     </a>
+     <hr>
+     <a href="#" class="list.item"><i class="fa-solid fa-inbox"></i>&nbsp;&nbsp;Inbox here
+     </a>
+     
+    
+</div>
+</body>
+</html>
