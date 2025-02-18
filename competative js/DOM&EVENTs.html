@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & EVENtS</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container red bg khan">
+        <div class="box" data-index="1234" data-column="collectively" style="display: flex; background-color: aquamarine;">I am a box</div>
+    </div>
+    <script>
+//         document.querySelector(".container").innerHTML
+//         document.querySelector(".container").innerHTML
+// '\n        <div class="box">I am a box</div>\n  
+// document.querySelector(".container").outerHTML
+
+// '<div class="container">\n        <div class="box">I am a box</div>\n    </div>'
+// document.querySelector(".container").tagName
+
+
+// 'DIV'
+// document.querySelector(".container").nodeName
+
+// 'DIV'
+// document.querySelector(".container").hidden
+
+// false
+// document.querySelector(".container").hidden=true
+
+
+// true
+// document.querySelector(".container").hidden=false
+
+
+// false
+                  // attributess
+// document.querySelector(".box").hasAttribute("style")
+// true
+// document.querySelector(".box").getAttribute("style")
+
+// 'display: flex; background-color: aquamarine;'
+
+// ocument.querySelector(".box").setAttribute("style","color:green; background-color: aquamarine;")
+
+// undefined
+// document.querySelector(".box").removeAttribute("style")
+
+// undefined
+// document.querySelector(".box").removeAttribute("style","background-color")
+
+// document.querySelector(".box").dataset
+
+
+// DOMStringMap {index: '1234', column: 'collectively'}
+// document.designMode="on";
+
+        //  (1)insert method:kkk
+        // let div=document.createElement("div")
+        // div.innerHTML="I am a <b> box </b>"
+        // div.setAttribute("class","created")
+        // set at the end of in container
+        // document.querySelector(".container").append(div);
+        // set at the first of in the container
+        // document.querySelector(".container").prepend(div);
+        // set after the container
+        // document.querySelector(".container").after(div);
+        // set before the container
+        // document.querySelector(".container").before(div);
+        // replace first box with this message
+        // document.querySelector(".container").replaceWith("Hi this is mee");
+
+        //(2) inser Adjacent HTML/Element/text
+        
+        // set hota hai div k bahir last me
+        // document.querySelector(".container").insertAdjacentHTML("afterend","Hi please help <b> ME </b>")
+        // set hota hai div k andar last me
+        // document.querySelector(".container").insertAdjacentHTML("beforeend","Hi please help <b> ME </b>")
+        // set hota hai div k bahir first me
+        // document.querySelector(".container").insertAdjacentHTML("beforebegin","Hi please help <b> ME </b>")
+        // set hota hai div k andar first me
+        // document.querySelector(".container").insertAdjacentHTML("afterbegin","Hi please help <b> ME </b>")
+//       (3) to remove node or element use remove function
+//       document.querySelector(".box").remove()
+// undefined
+
+// (3) to get find class lists and names
+// document.querySelector(".container").classList
+// DOMTokenList(4) ['container', 'red', 'bg', 'khan', value: 'container red bg khan']
+
+// document.querySelector(".container").className
+
+// 'container red bg khan'
+
+// to add and remove class or idz
+// document.querySelector(".container").classList.add("red")
+// undefined
+// document.querySelector(".container").classList.remove("khaan")
+// undefined
+
+// toggle mean laga hai to remove hojaega or agr nahi laga to add hojaega
+// document.querySelector(".container").classList.toggle("red")
+
+// false
+// document.querySelector(".container").classList.toggle("red")
+
+
+
+true
+    </script>
+</body>
+</html>
