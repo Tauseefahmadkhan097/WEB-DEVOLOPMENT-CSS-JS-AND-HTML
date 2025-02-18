@@ -1,0 +1,48 @@
+
+<!-- i   IMAGE PROPERTIES IN CSS BACKGROUND AND IMAGE BOTH -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object properties in css</title>
+    <style>
+        .container{
+            width: 434px;
+            height: 334px;
+            border: 2px solid black;
+            /* this is for background pr
+            operties */
+
+            
+        }
+        /* this is for body */
+        body{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6-DQF2pBwNFV9KzPafu9RghrNF1tZ8J3AA&s");
+            /* cover contain none */
+            background-size: cover;
+            /* repeat no repeat none repeat x repeat y */
+            background-repeat: no-repeat;
+            /* BORDER BOX /CONTENT BOX /PADDING BOX */
+            background-clip: padding-box;
+        }
+        /* this is for image */
+        img{
+            /* width: 434px; */
+            /* height: 334px; */
+            /* there is object coverand contain */
+
+            /* object-fit: cover; */
+            /* the set positon to top and right 10px 20px etc */
+            /* object-position: top left ; */
+            /* object-position: 10px 20px ; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&s" alt=""> -->
+    </div>
+</body>
+</html>
