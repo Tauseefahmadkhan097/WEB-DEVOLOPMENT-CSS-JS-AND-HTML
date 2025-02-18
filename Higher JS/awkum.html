@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Abdul Wali Khan University Mardan :: University Management System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">   
+     
+ <style>
+    a {
+    text-decoration: none;
+}
+.login-page {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+.form-right i {
+    font-size: 100px;
+}
+
+@media screen and (max-width: 992px) {  
+    .logo2 {
+    display: inline;
+  }}
+  @media screen and (min-width: 993px) {  
+    .logo2 {
+    display: none;
+  }}
+  #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+          
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+ </style>
+</head>
+<body  >
+<div id="loader" class="center"></div>
+    <div class="login-page bg-light" style=" background-image: url('https://lms.awkum.edu.pk/img/login-bg-18.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                     <div id ="showing_auth">
+</div>
+                    <img src="../img/umslogo3.png" width="100%" class="logo2 text-center" >
+                    
+                  <h3 class="mb-3"></h3>
+                    <div class="bg-white shadow rounded">
+                        <div class="row">
+                            <div class="col-md-7 pe-0">
+                                <div class="form-left h-100 py-5 px-5">
+                                    <form id='loginform' action="validate_login" method='post' class="row g-4">
+                                          <input type='hidden' name='csrf' value='f2ac46657e42195416fb9bbeb83e1843'>
+                                            <div class="col-12">
+                                                <label>Username<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="email" name='email' class="form-control" placeholder="Enter Email ID" required><br>
+                                                     <p id='email1' class='text-danger'></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label>Password<span class="text-danger">* </span> <small class='text-dark'>Note: Password is case sensitive</small></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="password" id='password' name='pass' class="form-control" placeholder="Enter Password" required><br>
+                                                    <p id='pass1'  class='text-danger'></p>
+                                                  
+                                                </div>
+                                            </div>
+                                           
+
+                                           <div class="col-sm-6"><input type="checkbox" onclick="myFunction()">Show Password</div>
+
+                                            <div class="col-sm-6">
+                                                <a href="reset-student-password" class="float-end text-primary">Forgot Password?</a>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <p id='loginmsg'></p>
+                                                 <button id='loginbtn' class="g-recaptcha btn btn-info" data-sitekey="6Len584nAAAAAO2WesjMR-kR-hEoIqSDAxc9DYKa" data-callback='onSubmit'>Login</button>
+                                            </div>
+                                    </form>
+                               <!--<p class='text-danger'>The UMS services will not be available for the next 36 hours starting from 28 March 2023 at 02:00 PM due to essential maintenance work in systems.</p>-->
+                           
+                                </div>
+                            </div>
+                            <div class="col-md-5 ps-0 d-none d-md-block"  style="justify-content: center;">
+                                <div class="form-right h-100 bg-primary text-white text-center pt-5 " style="justify-content: center;">
+                                    <!-- <i class="bi bi-bootstrap"></i> -->
+                                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/efdhjqgx.json"
+    trigger="loop"
+    delay="500"
+    colors="primary:#4be1ec,secondary:#cb5eee"
+    style="width:250px;height:250px">
+</lord-icon>
+                                    <!--<img src="../img/umslogo3.png" width="80%" class="mt-5" >-->
+                                     <h3 class="fs-2">AWKUM-UMS</h3> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-white">
+                        <small>
+                            © Armaan Ahmad Khan University Mardan (AWKUM)<br>
+                        </small>
+
+                    </p>
+                    <!-- <p class="text-end text-secondary mt-3">Bootstrap 5 Login Page Design</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+<!--modal-->
+<!-- Modal -->
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">Important Notice (Please read carefully)</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--       It is notified for information of all concerned that, -->
+<!--       <b><span class='text-danger'>the UMS services will not be available for the next 36 hours starting from 28 March 2023 at 02:00 PM due to essential maintenance work in systems.</span></b><br> -->
+<!--       The Directorate of I.T.-->
+<!--       appreciate your patience and will make every effort to complete the maintenance work as quickly as possible and will inform you through UMS as soon back online.-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>-->
+       
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>-->
+<!--<script>-->
+<!--    $(document).ready(function(){-->
+       
+<!--            $("#myModal").modal('show');-->
+      
+<!--    });-->
+<!--</script>-->
+    <!-- Bootstrap JS -->
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+function validateForm() {
+ 
+}
+       function onSubmit(token) {
+            let x = document.forms["loginform"]["email"].value;
+            let y = document.forms["loginform"]["pass"].value;
+  if (x == "") {
+    document.getElementById('email1').innerHTML = "Email must be filled out";
+    return false;
+  }
+  else if(y == "") {
+      document.getElementById('pass1').innerHTML = "Password must be filled out";
+    // alert("");
+    return false;
+  }
+  else
+  {
+     //  document.getElementById("loginform").validate();
+      
+           document.getElementById('loginmsg').innerHTML = "Please wait...";
+    
+     document.getElementById("loginform").submit();        
+    //  document.getElementById("loginbtn").disabled = true; 
+  }
+       
+       }
+     </script>
+        <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+    </script>
+    <script>
+        function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </script>
+    
+</body>
+</html>
