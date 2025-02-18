@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets Play with DOM Elements</title>
+</head>
+<body style="background-color: black; color: white;" >
+    <div class="parent"  >
+        <div class="item">Saturday</div>
+        <div class="item">Sunday</div>
+        <div class="item">Monday</div>
+        <div class="item">Tuesday</div>
+        <div class="item">Wednesday</div>
+        <div class="item">Friday</div>
+    </div>
+    <script>
+      let parent =  document.querySelector('.parent')
+      console.log(parent)
+    //  let items = document.querySelector('item')
+    //  console.log(parent.firstElementChild)
+    //  console.log(parent.lastElementChild)
+    //  let item=document.querySelector('.item')
+    //  console.log(item)
+    //  console.log(item.nextElementSibling)     
+    //  console.log(item.parentNode)     
+    
+// it gives html collection
+    console.log(parent.children)// giv all childrens
+    console.log(parent.children[1])
+
+    // print all to the  console
+
+    for (let i = 0; i < parent.children.length; i++) {
+        parent.children[i].style.color="pink"
+        console.log(parent.children[i].innerHTML);
+        
+    }
+
+
+
+      
+    
+    </script>
+</body>
+</html>

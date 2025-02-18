@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating elements in DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+//  (1)   Ek p tag create karo jisme text ho "Hello World!" aur isay ek div element ke andar add karo. div element ki ID content hai.
+//    let div= document.createElement('div')
+//    div.id='content'
+// let p=document.createElement('p')
+// p.textContent="Hello World"
+// let c=div.appendChild(p)
+// console.log(c)
+// console.log(c.parentElement)
+// document.body.append(c)
+
+// Ek button create karo jisme text ho "Click Me!" aur isay body ke andar add karo.
+
+// let button=document.createElement('button')
+// button.textContent="Click Me!"
+// console.log(button)
+// document.body.appendChild(button)
+
+// Ek ul (unordered list) create karo jisme 3 li (list item) elements ho. ul ko ek div ke andar add karo jisme class list-container ho.
+
+// let div=document.createElement('div')
+// div.className="list-container"
+// let ul=document.createElement('ul')
+// let li1=document.createElement('li')
+// let li2=document.createElement('li')
+// let li3=document.createElement('li')
+// ul.appendChild(li1)
+// ul.appendChild(li2)
+// ul.appendChild(li3)
+// console.log(ul)
+// div.appendChild(ul)
+// console.log(div)
+// Ek h1 element create karo jisme text ho "Welcome to My Website!" aur isay page ke top par add karo.
+
+// const h1=document.createElement('h1')
+// h1.textContent="Welcome to My Website!"
+// document.body.appendChild(h1)
+
+// Ek form element create karo jisme ek input field aur ek submit button ho. Form ko body ke andar add karo.
+
+// let form=document.createElement('form')
+// let input=document.createElement('input')
+// input.placeholder="Enter user name"
+// let submit=document.createElement('button')
+// submit.textContent="submit"
+// form.appendChild(input)
+// form.appendChild(submit)
+// document.body.appendChild(form)
+
+
+// +++++++++++++++++++++++++++++++++6+++++++++++++++++++++++++++++++++
+// let form=document.createElement('form')
+// let div=document.createElement('div')
+// div.id="form-container"
+// let label=document.createElement('label')
+// label.textContent='name'
+// let input=document.createElement('input')
+// input.placeholder='Name'
+// let label1=document.createElement('label')
+// label1.textContent='number'
+// let input1=document.createElement('input')
+// input1.placeholder='Number'
+// let label2=document.createElement('label')
+// label.textContent='Subscribe to news paper'
+// let input2=document.createElement('input')
+// let submit=document.createElement('button')
+// submit.textContent='submit'
+// form.appendChild(div)
+// div.appendChild(label)
+// div.appendChild(input)
+// div.appendChild(label1)
+// div.appendChild(input1)
+// // div.appendChild(label2)
+// div.appendChild(input2)
+// div.appendChild(input3)
+// div.appendChild(submit)
+// document.body.appendChild(form)
+// 1. Form element create karo
+var form = document.createElement('form');
+
+// 2. Label aur Text Input Field for "Name"
+var nameLabel = document.createElement('label');
+nameLabel.textContent = 'Name';
+nameLabel.htmlFor = 'name'; // Label ka for attribute set karo
+
+var nameInput = document.createElement('input');
+nameInput.type = 'text';
+nameInput.id = 'name'; // Input field ka id set karo
+nameInput.name = 'name'; // Input field ka name attribute set karo
+
+// 3. Label aur Number Input Field for "Age"
+var ageLabel = document.createElement('label');
+ageLabel.textContent = 'Age';
+ageLabel.htmlFor = 'age'; // Label ka for attribute set karo
+
+var ageInput = document.createElement('input');
+ageInput.type = 'number';
+ageInput.id = 'age'; // Input field ka id set karo
+ageInput.name = 'age'; // Input field ka name attribute set karo
+
+// 4. Label aur Select Dropdown for "Gender"
+var genderLabel = document.createElement('label');
+genderLabel.textContent = 'Gender';
+genderLabel.htmlFor = 'gender'; // Label ka for attribute set karo
+
+var genderSelect = document.createElement('select');
+genderSelect.id = 'gender'; // Select element ka id set karo
+genderSelect.name = 'gender'; // Select element ka name attribute set karo
+
+var options = ['Male', 'Female', 'Other']; // Options array
+
+options.forEach(function(optionText) {
+    var option = document.createElement('option');
+    option.value = optionText.toLowerCase(); // Option value set karo
+    option.textContent = optionText; // Option text set karo
+    genderSelect.appendChild(option); // Option ko select element ke andar add karo
+});
+
+// Set default selected option
+genderSelect.value = 'male'; // Default selected option set karo
+
+// 5. Checkbox for "Subscribe to newsletter"
+var checkboxLabel = document.createElement('label');
+checkboxLabel.textContent = 'Subscribe to newsletter';
+
+var checkboxInput = document.createElement('input');
+checkboxInput.type = 'checkbox';
+checkboxInput.id = 'subscribe'; // Checkbox ka id set karo
+checkboxInput.name = 'subscribe'; // Checkbox ka name attribute set karo
+
+// 6. Submit Button
+var submitButton = document.createElement('input');
+submitButton.type = 'submit';
+submitButton.value = 'Submit'; // Button ka text set karo
+
+// 7. Form ke andar saare elements add karo
+form.appendChild(nameLabel);
+form.appendChild(nameInput);
+form.appendChild(document.createElement('br')); // Line break add karo
+form.appendChild(ageLabel);
+form.appendChild(ageInput);
+form.appendChild(document.createElement('br')); // Line break add karo
+form.appendChild(genderLabel);
+form.appendChild(genderSelect);
+form.appendChild(document.createElement('br')); // Line break add karo
+form.appendChild(checkboxInput);
+form.appendChild(checkboxLabel);
+form.appendChild(document.createElement('br')); // Line break add karo
+form.appendChild(submitButton);
+
+// 8. Form ko div ke andar add karo
+var formContainer = document.getElementById('form-container');
+formContainer.appendChild(form);
+
+</script>
+</html>

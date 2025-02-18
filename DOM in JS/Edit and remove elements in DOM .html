@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and remove elements in DOM</title>
+</head>
+<body>
+  <ul class="languages">
+    <li>JavaScript</li>
+  </ul>  
+</body>
+<script>
+    
+    function AddLanguages(AddLang) {
+    function Mathrandom() {
+        let r=Math.ceil(Math.random()*100+50
+    )
+        let g=Math.ceil(Math.random()*100+50
+    )
+        let b=Math.ceil(Math.random()*100+50
+    )
+        return `${r},${g},${b}`
+    }
+    let rgb=Mathrandom()
+    console.log(rgb)
+        let li=document.createElement('li')
+        li.appendChild(document.createTextNode(`${AddLang}`))
+        document.querySelector('.languages').appendChild(li)
+        document.querySelector('.languages').appendChild(li).style.color=`rgb(${rgb})`
+    }
+    AddLanguages('Cpp')
+    AddLanguages('Py')
+    AddLanguages('Ruby')
+
+    // +++++++++++++++++EDit element++++++++++++++++++
+    let secondelement=document.querySelector('li:nth-child(2)')
+    console.log(secondelement)
+
+    const new1 =document.createTextNode('C')
+    secondelement.replaceWith(new1)
+// ++++++++++++++++++ 2nd edit+++++++++++++++++++
+let thirdelement=document.querySelector('li:nth-child(3)')
+thirdelement.textContent="C++"
+// ++++++++++++++++++++++third element++++++++++++++
+let firstelement=document.querySelector('li:nth-child(1)')
+firstelement.outerHTML='<li>TypeScript</li>'
+// +++++++++++++++++++++++++++ remove method+++++++++++++++++++
+
+let lastelement=document.querySelector('li:last-child')
+lastelement.remove()
+// +++++++++++++++++++ pratice+++++++++++++++++++
+// Dynamic Element Creation and Insertion:
+
+// Create a new <ul> element with three <li> children dynamically using JavaScript, and insert it into a specific section of the page.
+let ul=document.createElement('ul')
+ul.className='container'
+
+for(let i=1;i<=3;i++){
+    let li=document.createElement('li')
+    li.innerText="Hey this is me "+i
+    let child=ul.appendChild(li)
+    document.body.appendChild(child)
+    document.body.appendChild(child).style.color='blue'
+
+}
+console.log(ul)
+
+// Batch Updating Styles:
+
+// Ek function likhein jo ek specific class wale sab elements ko ek sath style changes (background color, font size, aur text color) apply kare.
+
+function UpdateStyle(userinput) {
+    let element=document.getElementsByClassName(userinput)
+    for(let i=0;i< element.length;i++){
+element[i].style.color='red'
+element[i].style.backgroundColor='pink'
+document.body.appendChild(element[i])
+    }
+    
+}
+UpdateStyle('Tauseef')
+UpdateStyle('Arman')
+UpdateStyle('Aamir')
+UpdateStyle('Shahzeb')
+
+// Ek script likhein jo sab <div> elements ko remove kare jinme inner text "delete" shamil ho.
+
+let div=document.createElement('div')
+div.textContent="redbg"
+Array.from(div)
+div.forEach(div => {
+    if(div.textContent.includes('delete')){
+        div.remove()
+    }
+    return div
+
+});
+document.body.appendChild(div)
+</script>
+</html>

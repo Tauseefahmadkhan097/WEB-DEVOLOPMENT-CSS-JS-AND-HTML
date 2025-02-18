@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANUPALATION</title>
+</head>
+<body>
+    <h1 class="Myheading" id="First-heading">This is for practice</h1>
+    <h2 class="2nd-elements">Let See</h2>
+    <h2 class="2nd-elements"> Okayyyy</h2>
+    <ul>
+        <li class="redbg">4rth</li>
+        <li class="redbg">3rd</li>
+        <li class="redbg">2nd</li>
+        <li class="redbg">FIrst</li>
+        
+    </ul>
+    <form action="hii">
+        <div> this is new tuturial</div>
+        <link rel="stylesheet" href="www.facbook.com">
+    </form>
+    <a href="www.facebook.com">Facebook</a>
+    <!-- <script>
+
+
+Yes, you've correctly identified that both NodeList and HTMLCollection are DOM objects used to represent collections of elements. Let’s delve deeper into the differences between them:
+
+Differences Between NodeList and HTMLCollection
+Type of Collection:
+
+NodeList:
+Can contain nodes of different types, including elements, text nodes, and comments.
+It can be either live or static.
+HTMLCollection:
+Contains only HTML elements.
+It is typically a live collection.
+Methods of Retrieval:
+
+NodeList:
+Retrieved using methods like document.querySelectorAll() and document.childNodes.
+The querySelectorAll() method returns a static NodeList.
+HTMLCollection:
+Retrieved using properties like document.forms, document.images, document.links, and document.getElementsByClassName().
+These properties generally return live HTMLCollections.
+Live vs. Static:
+
+NodeList:
+Some methods return a live NodeList (like document.getElementsByTagName()), while others return a static NodeList (like document.querySelectorAll()).
+HTMLCollection:
+Typically live, meaning it updates automatically when the document changes.
+Indexing and Iteration:
+
+Both NodeList and HTMLCollection are array-like and support indexing, but their iteration methods might differ.
+NodeList:
+You can use methods like forEach() to iterate if it's a static NodeList.
+HTMLCollection:
+You can use forEach() in modern browsers; otherwise, use traditional loops.
+        document.getElementById('First-heading').innerHTML
+'This is for practice'
+document.getElementById('First-heading').textContent
+'This is for practice'
+document.getElementById('First-heading').innerText
+'This is for practice' -->
+
+<!-- 1.innerHTML: returns all html nodes 
+2.textContent : returns all text content
+3.innerText : gives the text in the selected node
+textContent gets the content of all elements, including <script> and <style> elements. In contrast, innerText only shows "human-readable" elements. textContent returns every element in the node. In contrast, innerText is aware of styling and won't return the text of "hidden" elements.
+4.querySelector
+5.querySelectorAll
+6.getAttribute
+7.setAttribute -->
+    </script>
+    
+</body>
+</html>

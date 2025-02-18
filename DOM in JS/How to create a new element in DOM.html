@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to create a new element in DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+  const div =  document.createElement('div')
+console.log(div)
+div.className="Myclass"
+div.id="Redbg"
+div.textContent="This is Learning tuturial"
+div.style.color='green'
+div.style.padding='12px'
+// to add another text in a div
+// div.append('&nbsp;')
+const addText=document.createTextNode("Hiii this is a text")
+div.append(addText)
+div.append("This is 3rd paragraph")
+// div.innerText="This is 4rth"
+
+// to add this div to scrreen or document object
+document.body.appendChild(div)
+// document.body.append(div)
+
+</script>
+</html>

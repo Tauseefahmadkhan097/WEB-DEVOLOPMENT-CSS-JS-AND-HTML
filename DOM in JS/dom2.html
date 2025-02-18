@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live HTMLCollection Example</title>
+</head>
+<body>
+    <div id="container">
+        <p class="item">Item 1</p>
+        <p class="item">Item 2</p>
+    </div>
+    <button id="add">Add Item</button>
+
+    <script>
+        // Select a live HTMLCollection
+        const itemsCollection = document.getElementsByClassName('item');
+        console.log('Initial collection length:', itemsCollection.length);
+
+        // Add event listener to the button
+        document.getElementById('add').addEventListener('click', () => {
+            // Create a new element and add it to the container
+            const newItem = document.createElement('p');
+            newItem.className = 'item';
+            newItem.textContent = `Item ${itemsCollection.length + 1}`;
+            document.getElementById('container').appendChild(newItem);
+
+            // The HTMLCollection is updated automatically
+            console.log('Updated collection length:', itemsCollection.length);
+        });
+    </script>
+</body>
+</html>
