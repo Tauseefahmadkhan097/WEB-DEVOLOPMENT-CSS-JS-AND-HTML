@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+    #main{
+        min-width: 20px;
+        height: 80px;
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    #main div{
+        /* height: 20px; */
+        border: 1px solid yellow;
+        /* background-color: bisque; */
+        /* padding: 20px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width:70px;
+    }
+    #main2{
+        min-width: 20px;
+        height: 80px;
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        flex-direction: column-reverse;
+    }
+    #main2 div{
+        /* height: 20px; */
+        border: 1px solid yellow;
+        /* background-color: bisque; */
+        /* padding: 20px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width:70px;
+        color: white;
+    }
+    #box2{
+        background-color:  #add8e6; 
+        color: black;
+    }
+    #box1,#box3,#box4,#box5{
+        background-color:  #ff7f50;
+    }
+    #main #box2{
+    flex-shrink: 3;
+}
+    #box1{
+    flex-grow: 1;
+}
+#box2{
+    flex-grow: 2;
+}
+#box3{
+    flex-grow: 3;
+}
+#box4{
+    flex-grow:4;
+}
+#box5{
+    flex-grow:5;
+}
+/*----*/
+
+    #box1:hover,#box3:hover,#box4:hover,#box5:hover{
+        background-color:  #e34810;
+        color: #add8e6;
+        cursor: pointer;
+    }
+    #box2:hover{
+        background-color:  #1995be; 
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    </style>
+</head>
+<body>
+    <h1>The flex-direction Property</h1>
+
+<h2>Block 1</h2>
+<div id="main">
+  <div id="box1">1</div>
+  <div id="box2">2</div>
+  <div id="box1">3</div>
+  <div id="box1">4</div>
+  <div id="box1">5</div>
+  <div id="box1">6</div>
+  <div id="box1">7</div>
+  <div id="box1">8</div>
+  <div id="box1">9</div>
+  <div id="box1">10</div>  
+</div>
+
+<h2>Block 2</h2>
+<div id="main2">
+  <div id="box1">1</div>
+  <div id="box2">2</div>
+  <div id="box3">3</div>
+  <div id="box4">4</div>
+  <div id="box5">5</div>
+</div>
+
+</body>
+</html>
